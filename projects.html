@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    <div class="bg-container">
+        <div class="bg-gradient"></div>
+        <div class="bg-grid"></div>
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+        <canvas id="particles"></canvas>
+    </div>
+
+    <header>
+        <div class="logo"><i class="fas fa-portrait"></i> Siva Balan R</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Awards.html">Awards</a></li>
+                <li><a href="Course.html">Learning & Growth</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-title">
+        <h1>My Projects</h1>
+    </section>
+
+<section class="projects-section">
+    <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Smart Newspaper Reader">
+            </div>
+            <div class="project-overlay">
+                <span class="project-tag">AI + Embedded</span>
+                <h3>Smart Newspaper Reading System</h3>
+                <p>AI system that converts newspaper text images into speech for visually impaired people using Raspberry Pi.</p>
+                <a href="#" class="view-btn">View Details →</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1727600950797-3eee9f80a7a0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm92ZXIlMjBlbGVjdHJvbmljJTIwa2l0fGVufDB8fDB8fHww" alt="LoRa Rover">
+            </div>
+            <div class="project-overlay">
+                <span class="project-tag">Robotics</span>
+                <h3>Rover using LoRa Communication</h3>
+                <p>Spy robot modified into a rover using LoRa communication for long-distance control.</p>
+                <a href="#" class="view-btn">View Details →</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1692481060581-98c224124f12?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Leaf Disease Detection">
+            </div>
+            <div class="project-overlay">
+                <span class="project-tag">Image Processing</span>
+                <h3>Leaf Disease Detection</h3>
+                <p>AI system that detects plant diseases using image processing and monitoring.</p>
+                <a href="#" class="view-btn">View Details →</a>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1694859239675-1624919d29e6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9hZCUyMHNpZ24lMjBkZXRlY3Rpb258ZW58MHwwfDB8fHww" alt="Road Sign Detection">
+            </div>
+            <div class="project-overlay">
+                <span class="project-tag">Computer Vision</span>
+                <h3>Smart Road Sign Detection</h3>
+                <p>Traffic sign detection system using CNN and Raspberry Pi for safer driving.</p>
+                <a href="#" class="view-btn">View Details →</a>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1664455340023-214c33a9d0bd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZSUyMGNvbW1lcmNlfGVufDB8MHwwfHx8MA%3D%3D" alt="Pettikadai E-Commerce">
+            </div>
+            <div class="project-overlay">
+                <span class="project-tag">Web Application</span>
+                <h3>Pettikadai – E-Commerce Application</h3>
+                <p>E-commerce platform that helps small local stores sell products online.</p>
+                <a href="#" class="view-btn">View Details →</a>
+            </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://media.istockphoto.com/id/2248062461/photo/advanced-lifi-technology-with-light-fidelity-wireless-communication-and-data-transmission.webp?a=1&b=1&s=612x612&w=0&k=20&c=_qOFiMqYiWNeE6j9QlzlqhjCtRkRW3VHTHoBsYGN7_M=" alt="LiFi Technology">
+            </div>
+            <div class="project-overlay">
+                <span class="project-tag">Communication Tech</span>
+                <h3>Life-Saving with Intelligent Li-Fi Technology</h3>
+                <p>Emergency communication system using Li-Fi for faster and reliable data transfer.</p>
+                <a href="#" class="view-btn">View Details →</a>
+            </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800" alt="Medical Image Processing">
+            </div>
+            <div class="project-overlay">
+                <span class="project-tag">Image Processing</span>
+                <h3>Synthetic Medical Image Segmentation</h3>
+                <p>Medical image segmentation and edge detection using advanced image processing.</p>
+                <a href="#" class="view-btn">View Details →</a>
+            </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://plus.unsplash.com/premium_photo-1737066451197-93d342a476c2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dHJhZmljJTIwc2lnbmFsJTIwY29udHJvbHxlbnwwfDB8MHx8fDA%3D" alt="Traffic Signal Control">
+            </div>
+            <div class="project-overlay">
+                <span class="project-tag">AI + IoT</span>
+                <h3>Intelligent Traffic Signal Control</h3>
+                <p>Smart traffic system that gives priority to emergency vehicles using intelligent signal control.</p>
+                <a href="#" class="view-btn">View Details →</a>
+            </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://media.istockphoto.com/id/2155520991/photo/digital-maintenance-03.webp?a=1&b=1&s=612x612&w=0&k=20&c=9eE-Ohch-rjWjk_b6kV2AoM_KuvLuI1ggyD_j0emDNU=" alt="Water Tank Monitoring">
+            </div>
+            <div class="project-overlay">
+                <span class="project-tag">IoT</span>
+                <h3>Water Tank Monitoring System</h3>
+                <p>IoT system that monitors water level and automatically controls the pump.</p>
+                <a href="#" class="view-btn">View Details →</a>
+            </div>
+        </div>
+        
+    <div class="project-card">
+    <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="Jarvis AI Assistant">
+    </div>
+    <div class="project-overlay">
+        <span class="project-tag">Artificial Intelligence</span>
+        <h3>Jarvis AI Assistant</h3>
+        <p>Personal AI assistant capable of voice interaction, task automation, and intelligent responses using Python and AI models.</p>
+        <a href="#" class="view-btn">View Details →</a>
+    </div>
+    </div>
+        
+
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-logo"><i class="fas fa-cube"></i> Building Future Tech</div>
+        <div class="footer-social">
+            <a href="https://github.com/siva-balan-1" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/siva-balan-r-466420249/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://sivabalantechloky.wordpress.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fab fa-wordpress"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ps_devils_king_0_0_1/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/Sivabalan001/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://x.com/SivaBal77490741" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <div class="footer-tagline"><p>Built with <span>♥</span> and lots of <span>☕</span></p></div>
+        <div class="footer-credit"><p>© 2024 Sivabalan R. All rights reserved.</p></div>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        function resizeCanvas() { canvas.width = window.innerWidth; 
+canvas.height = window.innerHeight; }
+        resizeCanvas(); window.addEventListener('resize', resizeCanvas);
+        class Particle { constructor() { this.x = Math.random() * 
+canvas.width; this.y = Math.random() * canvas.height; this.size = 
+Math.random() * 2 + 1; this.speedX = (Math.random() - 0.5) * 0.5; 
+this.speedY = (Math.random() - 0.5) * 0.5; this.opacity = Math.random() * 
+0.5 + 0.2; } update() { this.x += this.speedX; this.y += this.speedY; if 
+(this.x < 0 || this.x > canvas.width) this.speedX *= -1; if (this.y < 0 || 
+this.y > canvas.height) this.speedY *= -1; } draw() { ctx.beginPath(); 
+ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = 
+`rgba(0, 245, 255, ${this.opacity})`; ctx.fill(); } }
+        for (let i = 0; i < 100; i++) particles.push(new Particle());
+        function animateParticles() { ctx.clearRect(0, 0, canvas.width, 
+canvas.height); particles.forEach(p => { p.update(); p.draw(); }); 
+particles.forEach((p1, i) => { particles.slice(i + 1).forEach(p2 => { 
+const dx = p1.x - p2.x, dy = p1.y - p2.y, dist = Math.sqrt(dx*dx + dy*dy); 
+if (dist < 150) { ctx.beginPath(); ctx.strokeStyle = `rgba(0, 245, 255, 
+${0.1 * (1 - dist/150)})`; ctx.lineWidth = 0.5; ctx.moveTo(p1.x, p1.y); 
+ctx.lineTo(p2.x, p2.y); ctx.stroke(); } }); }); 
+requestAnimationFrame(animateParticles); }
+        animateParticles();
+
+        // 3D Card Tilt Effect
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left, y = e.clientY - rect.top;
+                const rotateX = (y - rect.height/2) / 20, rotateY = 
+(rect.width/2 - x) / 20;
+                card.style.transform = `perspective(1000px) 
+rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(30px)`;
+            });
+            card.addEventListener('mouseleave', () => card.style.transform 
+= '');
+        });
+    </script>
+</body>
+</html>

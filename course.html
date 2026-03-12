@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Achievements</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/Style.css">
+
+<style>
+/* ============================================
+   3D Floating Titles
+   ============================================ */
+.section-title {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px; /* space from header */
+}
+.section-title h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    text-align: center;
+    animation: titleFloat 3s ease-in-out infinite;
+    background: linear-gradient(135deg, #00f5ff, #ff00f5, #00ff90); /* gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Card Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px 50px;
+}
+
+/* Project Cards */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 10px;
+    transition: 0.3s;
+    opacity: 0;
+}
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+.view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 10px;
+    background: #00f5ff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Gallery Modal */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.gallery-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+.gallery-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.5);
+    border: none;
+    font-size: 2rem;
+    padding: 0 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.prev { left: -50px; }
+.next { right: -50px; }
+</style>
+</head>
+<body>
+
+<div class="bg-container">
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <canvas id="particles"></canvas>
+</div>
+
+<header>
+    <div class="logo"><i class="fas fa-portrait"></i> Siva Balan R</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Awards.html" >Awards</a></li>
+            <li><a href="Course.html" class="active">Learning & Growth</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<!-- CONFERENCES PHOTO BOOTH -->
+<!-- <section class="section-title"><h2>Courses</h2></section>
+<div class="carousel-container" id="carousel-conferences">
+    <div class="carousel-track">
+        <img src="images/conferences/conf1.jpg" alt="Conf1">
+        <img src="images/conferences/conf2.jpg" alt="Conf2">
+        <img src="images/conferences/conf3.jpg" alt="Conf3">
+    </div>
+    <button class="carousel-btn prev" onclick="moveCarousel('conferences', -1)">❮</button>
+    <button class="carousel-btn next" onclick="moveCarousel('conferences', 1)">❯</button>
+</div> -->
+<section class="section-title"><h2>Courses</h2></section>
+
+<div class="courses-photo-booths">
+
+    
+
+    <!-- Booth 2 -->
+    <div class="photo-booth-card">
+        <h3>IBM Certifications</h3>
+        <div class="carousel-container" id="carousel-course2">
+            <div class="carousel-track">
+                <img src="images/course/IBM/IBM Robotic Process Automation - Intermediate I_Certificate - IBM Robotic Process Automation - Intermediate I_page-0001.jpg" alt="Conf4">
+                <img src="images/course/IBM/IBM Robotic Process Automation - Intermediate II_Certificate - IBM Robotic Process Automation - Intermediate II_page-0001.jpg" alt="Conf5">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('course2', -1)">❮</button>
+            <button class="carousel-btn next" onclick="moveCarousel('course2', 1)">❯</button>
+        </div>
+    </div>
+
+    <!-- Booth 3 -->
+    <div class="photo-booth-card">
+        <h3>Microsoft Azure data and Power platform Fundamentals</h3>
+        <div class="carousel-container" id="carousel-course3">
+            <div class="carousel-track">
+                <img src="images/course/Microsoft courses/microsoft azure data fundamentals: Explore relationaldata in azure-page-00001.jpg" alt="Conf5">
+                <img src="images/course/Microsoft courses/microsoft azure data fundamentals:Explore non-relational data inazure-page-00001.jpg" alt="Conf6">
+                <img src="images/course/Microsoft courses/microsoft azure data funtamenta: Explore mordern data warehouse analytics in azure-page-00001.jpg" alt="Conf7">
+                <img src="images/course/Microsoft courses/microsoft azure data funtamentals: explore core data concepts-page-00001.jpg" alt="Conf8">
+                <img src="images/course/Microsoft courses/microsoft power platform funtamentals-page-00001.jpg" alt="Conf9">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('course3', -1)">❮</button>
+            <button class="carousel-btn next" onclick="moveCarousel('course3', 1)">❯</button>
+        </div>
+    </div>
+
+    <!-- Booth 4 -->
+    <div class="photo-booth-card">
+        <h3>Analog IC Design using LT Spice</h3>
+        <div class="carousel-container" id="carousel-course4">
+            <div class="carousel-track">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.20.55 PM.png" alt="Conf10">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.21.03 PM.png" alt="Conf11">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.22.28 PM.png" alt="Conf12">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.22.36 PM.png" alt="Conf13">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.22.43 PM.png" alt="Conf14">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.22.48 PM.png" alt="Conf15">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.22.56 PM.png" alt="Conf16">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.25.33 PM.png" alt="Conf17">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.25.44 PM.png" alt="Conf18">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.25.53 PM.png" alt="Conf19">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.26.03 PM.png" alt="Conf20">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.28.13 PM.png" alt="Conf21">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.28.25 PM.png" alt="Conf22">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.28.32 PM.png" alt="Conf23">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.28.40 PM.png" alt="Conf24">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.29.23 PM.png" alt="Conf26">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.29.31 PM.png" alt="Conf27">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.29.40 PM.png" alt="Conf28">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.29.47 PM.png" alt="Conf29">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.30.33 PM.png" alt="Conf30">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.34.25 PM.png" alt="Conf31">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.34.36 PM.png" alt="Conf32">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.34.44 PM.png" alt="Conf33">
+                <img src="images/course/Naan Mudhalvan/Analog IC Design/Screenshot 2024-04-11 at 2.34.51 PM.png" alt="Conf34">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('course4', -1)">❮</button>
+            <button class="carousel-btn next" onclick="moveCarousel('course4', 1)">❯</button>
+        </div>
+    </div>
+    <!-- Booth 1 -->
+    <div class="photo-booth-card">
+        <h3>Microsoft Office Certification</h3>
+        <div class="carousel-container" id="carousel-course1">
+            <div class="carousel-track">
+                <img src="images/course/Naan Mudhalvan/MSoffice/naan mudhalvan full begin-page-00001.jpg" alt="Conf1" onclick="openZoom(this)">
+                <img src="images/course/Naan Mudhalvan/MSoffice/naan mudhalvan full advance-page-00001.jpg" alt="Conf2" onclick="openZoom(this)">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel('course1', -1)">❮</button>
+            <button class="carousel-btn next" onclick="moveCarousel('course1', 1)">❯</button>
+        </div>
+    </div>
+
+</div>
+<!-- conference PHOTO BOOTH -->
+<section class="section-title"><h2>Conference</h2></section>
+<div class="carousel-container" id="carousel-participation">
+    <div class="carousel-track">
+        <img src="images/Conference/attend the international conference -page-00001.jpg" alt="Part1">
+        <img src="images/Conference/international conference_page-0001.jpg" alt="Part2">
+    </div>
+    <button class="carousel-btn prev" onclick="moveCarousel('participation', -1)">❮</button>
+    <button class="carousel-btn next" onclick="moveCarousel('participation', 1)">❯</button>
+</div>
+
+
+<!-- workshops PHOTO BOOTH -->
+<section class="section-title"><h2>Workshop</h2></section>
+<div class="carousel-container" id="carousel-workshop">
+    <div class="carousel-track">
+        <img src="images/workshops/ai workshop at NIT trichy-page-00001.jpg" alt="Work1">
+        <img src="images/workshops/guest lecture on introduction t front end design flow in asci-page-00001.jpg" alt="Work2">
+        <img src="images/workshops/IOT with Android App workshop-page-00001.jpg" alt="Work3">
+        <!-- <img src="images/workshops/lecture speech a session on acheving problem solution fit abd market fit-page-00001.jpg" alt="Work3"> -->
+        <img src="images/workshops/WhatsApp Image 2024-04-08 at 20.12.54.jpeg" alt="Work3">
+        <img src="images/workshops/WhatsApp Image 2024-04-08 at 20.12.55 (2).jpeg" alt="Work3">
+        <img src="images/workshops/workshop ai and ml-page-00001.jpg" alt="Work3">
+        <img src="images/workshops/workshop android app development and machine learning -page-00001.jpg" alt="Work3">
+        <img src="images/workshops/workshop Latest project technology ideal & tips-page-00001.jpg" alt="Work3">
+        <img src="images/workshops/workshop on mobile app development with flutter-page-00001.jpg" alt="Work3">
+        <img src="images/workshops/workshop problem solvig & ideation workshop on roadmap for patent creation-page-00001.jpg" alt="Work3">
+        <img src="images/workshops/workshop Qualtiy of services in 4g and 5g networks-page-00001.jpg" alt="Work3">
+    </div>
+    <button class="carousel-btn prev" onclick="moveCarousel('workshop', -1)">❮</button>
+    <button class="carousel-btn next" onclick="moveCarousel('workshop', 1)">❯</button>
+</div>
+
+
+<style>
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-track img {
+    width: 100%;
+    flex-shrink: 0;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    font-size: 2rem;
+    padding: 0 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+</style>
+
+<script>
+// const carousels = {
+//     conferences: { index: 0, track: document.querySelector('#carousel-conferences .carousel-track'), images: document.querySelectorAll('#carousel-conferences .carousel-track img') },
+//     participation: { index: 0, track: document.querySelector('#carousel-participation .carousel-track'), images: document.querySelectorAll('#carousel-participation .carousel-track img') }
+// };
+
+// // Move Carousel manually
+// function moveCarousel(type, direction) {
+//     const carousel = carousels[type];
+//     carousel.index += direction;
+//     if(carousel.index < 0) carousel.index = carousel.images.length - 1;
+//     if(carousel.index >= carousel.images.length) carousel.index = 0;
+//     const width = carousel.images[0].clientWidth;
+//     carousel.track.style.transform = `translateX(-${carousel.index * width}px)`;
+// }
+
+// // Auto-slide every 3 seconds
+// setInterval(() => {
+//     Object.keys(carousels).forEach(type => moveCarousel(type, 1));
+// }, 3000, 'course1', 'course2', 'course3', 'course4', 'participation');
+
+// // Update carousel on window resize
+// window.addEventListener('resize', () => {
+//     Object.keys(carousels).forEach(type => {
+//         const carousel = carousels[type];
+//         const width = carousel.images[0].clientWidth;
+//         carousel.track.style.transform = `translateX(-${carousel.index * width}px)`;
+//     });
+// });
+// Initialize all carousels dynamically
+const carouselIds = ['course1', 'course2', 'course3', 'course4', 'participation', 'workshop'];
+const carousels = {};
+
+carouselIds.forEach(id => {
+    const container = document.getElementById('carousel-' + id);
+    const track = container.querySelector('.carousel-track');
+    const images = track.querySelectorAll('img');
+    carousels[id] = { index: 0, track: track, images: images, total: images.length };
+});
+
+// Function to move carousel
+function moveCarousel(id, direction) {
+    const carousel = carousels[id];
+    carousel.index += direction;
+    if (carousel.index < 0) carousel.index = carousel.total - 1;
+    if (carousel.index >= carousel.total) carousel.index = 0;
+
+    const width = carousel.images[0].clientWidth;
+    carousel.track.style.transform = `translateX(-${carousel.index * width}px)`;
+}
+
+// Auto-slide every 3 seconds
+setInterval(() => {
+    carouselIds.forEach(id => moveCarousel(id, 1));
+}, 5000);
+
+// Adjust on window resize
+window.addEventListener('resize', () => {
+    carouselIds.forEach(id => {
+        const carousel = carousels[id];
+        const width = carousel.images[0].clientWidth;
+        carousel.track.style.transform = `translateX(-${carousel.index * width}px)`;
+    });
+});
+</script>
+
+<!-- Gallery Modal -->
+<div id="galleryModal" class="gallery-modal">
+    <div class="gallery-content">
+        <button class="nav-btn prev" onclick="prevImage()">❮</button>
+        <img id="galleryImage">
+        <button class="nav-btn next" onclick="nextImage()">❯</button>
+    </div>
+</div>
+<footer>
+        <div class="footer-logo"><i class="fas fa-cube"></i> Building Future Tech</div>
+        <div class="footer-social">
+            <a href="https://github.com/siva-balan-1" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/siva-balan-r-466420249/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://sivabalantechloky.wordpress.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fab fa-wordpress"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ps_devils_king_0_0_1/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/Sivabalan001/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://x.com/SivaBal77490741" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <div class="footer-tagline"><p>Built with <span>♥</span> and lots of <span>☕</span></p></div>
+        <div class="footer-credit"><p>© 2024 Sivabalan R. All rights reserved.</p></div>
+    </footer>
+
+
+<script>
+/* PARTICLES */
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let particles = [];
+function resizeCanvas(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; }
+resizeCanvas(); window.addEventListener('resize', resizeCanvas);
+class Particle{
+    constructor(){ this.x=Math.random()*canvas.width; this.y=Math.random()*canvas.height; this.size=Math.random()*2+1;
+    this.speedX=(Math.random()-0.5)*0.5; this.speedY=(Math.random()-0.5)*0.5; this.opacity=Math.random()*0.5+0.2; }
+    update(){ this.x+=this.speedX; this.y+=this.speedY; if(this.x<0||this.x>canvas.width)this.speedX*=-1; if(this.y<0||this.y>canvas.height)this.speedY*=-1; }
+    draw(){ ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fillStyle=`rgba(0,245,255,${this.opacity})`; ctx.fill(); }
+}
+for(let i=0;i<100;i++) particles.push(new Particle());
+function animateParticles(){ ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(animateParticles);}
+animateParticles();
+
+/* GALLERY */
+
+const carouselPositions = {};
+
+function moveCarousel(id, direction) {
+    const container = document.getElementById('carousel-' + id);
+    const track = container.querySelector('.carousel-track');
+    const images = track.querySelectorAll('img');
+    const total = images.length;
+
+    if (!carouselPositions[id]) carouselPositions[id] = 0;
+
+    carouselPositions[id] += direction;
+    if (carouselPositions[id] < 0) carouselPositions[id] = total - 1;
+    if (carouselPositions[id] >= total) carouselPositions[id] = 0;
+
+    const offset = -carouselPositions[id] * 100;
+    track.style.transform = `translateX(${offset}%)`;
+}
+
+</script>
+</body>
+</html>
