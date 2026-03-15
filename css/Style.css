@@ -908,7 +908,18 @@ rgba(123, 47, 247, 0.3) 100%);
     gap: 80px;
     width: 100%;
 }
+/* newely added */
+.contact-link{
+text-decoration:none;
+color:inherit;
+display:block;
+}
 
+.contact-link:hover .contact-method{
+transform:translateY(-3px);
+transition:0.3s;
+}
+/*  */
 .contact-info h2 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 3rem;
