@@ -20,18 +20,28 @@
     </div>
 
     <header>
-        <div class="logo"><i class="fas fa-portrait"></i> Siva Balan R</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="Awards.html">Awards</a></li>
-                <li><a href="Course.html">Learning & Growth</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <div class="logo">
+        <i class="fas fa-portrait"></i> SIVA BALAN R
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navMenu">
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="Awards.html">Awards</a></li>
+            <li><a href="Course.html">Learning & Growth</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
 
     <section class="page-title"><h1>About Me</h1></section>
 
@@ -180,6 +190,18 @@ requestAnimationFrame(update); } else counter.textContent = target + '+';
 update(); this.unobserve(e[0].target); 
 }}).observe(counter.closest('.stat-item'));
         });
+
+        // Hamburger Menu Toggle
+        
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+
     </script>
 </body>
 </html>

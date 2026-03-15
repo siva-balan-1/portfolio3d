@@ -22,9 +22,18 @@
 
     <!-- HEADER -->
     <header>
-        <div class="logo"><i class="fas fa-portrait"></i> SIVA BALAN R</div>
-        <nav>
-            <ul>
+
+        <div class="logo">
+            <i class="fas fa-portrait"></i> SIVA BALAN R
+        </div>
+
+    <!-- HAMBURGER -->
+        <div class="hamburger" id="hamburger">
+           <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="navMenu">
+          <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="Awards.html">Awards</a></li>
@@ -33,7 +42,8 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
+
+    </header>   
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -189,6 +199,20 @@
             requestAnimationFrame(animateParticles);
         }
         animateParticles();
+        // hamburger menu toggle
+        
+
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("navMenu");
+
+        hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        });
+        
+
+
+
+
         
     </script>
 </body>

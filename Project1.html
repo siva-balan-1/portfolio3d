@@ -18,18 +18,28 @@
     </div>
 
     <header>
-        <div class="logo"><i class="fas fa-cube"></i> PORTFOLIO</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="Awards.html">Awards</a></li>
-                <li><a href="Course.html">Learning & Growth</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <div class="logo">
+        <i class="fas fa-portrait"></i> SIVA BALAN R
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navMenu">
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Awards.html">Awards</a></li>
+            <li><a href="Course.html">Learning & Growth</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
 
     <!-- Back Button - Returns to projects.html -->
     <a href="projects.html" class="back-btn">
@@ -154,6 +164,12 @@ ${0.1 * (1 - dist/150)})`; ctx.lineWidth = 0.5; ctx.moveTo(p1.x, p1.y);
 ctx.lineTo(p2.x, p2.y); ctx.stroke(); } }); }); 
 requestAnimationFrame(animateParticles); }
         animateParticles();
+        const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
     </script>
 </body>
 </html>

@@ -1326,4 +1326,92 @@ footer {
 .carousel-btn.next {
     right: 10px;
 }
+/* Hamburg functions */
 
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+/* Logo */
+.logo{
+    font-size:24px;
+    font-weight:600;
+}
+
+/* Nav links */
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+}
+
+/* Hamburger hidden in desktop */
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+/* NAV MENU */
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+/* HAMBURGER */
+.hamburger{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+nav{
+    position:absolute;
+    top:70px;
+    right:0;
+    width:100%;
+    background:#0b0b0b;
+    display:none;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+nav ul li{
+    padding:15px 0;
+}
+
+/* show menu */
+nav.active{
+    display:block;
+}
+
+/* show hamburger */
+.hamburger{
+    display:block;
+}
+
+}

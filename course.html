@@ -128,19 +128,28 @@
     <div class="bg-glow bg-glow-2"></div>
     <canvas id="particles"></canvas>
 </div>
-
 <header>
-    <div class="logo"><i class="fas fa-portrait"></i> Siva Balan R</div>
-    <nav>
+
+    <div class="logo">
+        <i class="fas fa-portrait"></i> SIVA BALAN R
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navMenu">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" >Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="Awards.html" >Awards</a></li>
+            <li><a href="Awards.html">Awards</a></li>
             <li><a href="Course.html" class="active">Learning & Growth</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
 </header>
 
 
@@ -449,6 +458,12 @@ function moveCarousel(id, direction) {
     const offset = -carouselPositions[id] * 100;
     track.style.transform = `translateX(${offset}%)`;
 }
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
 
 </script>
 </body>
